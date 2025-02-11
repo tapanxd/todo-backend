@@ -1,0 +1,12 @@
+services:
+  - name: todo-app-backend
+    type: web
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://tapanpanchal2000:mongoLogin123@cluster0.1t7lt.mongodb.net/ToDo?retryWrites=true&w=majority
+      - key: PORT
+        value: 5000
